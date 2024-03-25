@@ -175,7 +175,7 @@ namespace BackendTask1.Controllers
 
             var jsonData = new
             {
-                FileName = formData.FileName,
+                FileName = Path.GetFileNameWithoutExtension(formData.FileName),
                 Owner = formData.Owner,
                 Description = formData.Description,
                 CreationDate = DateTime.Now.ToString("o"),

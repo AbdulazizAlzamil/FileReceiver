@@ -37,7 +37,7 @@ namespace BackendTask1.Services
                 var fileData = JsonSerializer.Deserialize<JsonDataModel>(jsonData);
                 var fileInfo = new FileInfoModel
                 {
-                    FileName = fileName,
+                    FileName = Path.GetFileNameWithoutExtension(fileName),
                     Owner = fileData.Owner,
                     Description = fileData.Description,
                     CreationDate = fileData.CreationDate,
